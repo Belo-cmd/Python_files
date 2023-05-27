@@ -3,8 +3,8 @@ import random
 def user_input():
     while True:
         user_choice = input('What is it gonna be, Rock, Paper, Scissors: ').lower()
-        choices = ['rock','paper','scissors'] or ['Rock', 'Paper', 'Scissors']
-        if user_choice in ['rock', 'paper','scissors'] or ['Rock','Paper','Scissors']:
+        choices = ['rock','paper','scissors']
+        if user_choice in ['rock', 'paper','scissors']:
             return user_choice 
         else:
             return 'invalid input try again'
@@ -13,7 +13,7 @@ def user_input():
 
 def com_input():
     while True:
-        choices = ['rock','paper','scissors'] or ['Rock','Paper','Scissors']
+        choices = ['rock','paper','scissors']
         com_choice = random.choice(choices)
         return com_choice
     
@@ -21,7 +21,7 @@ def com_input():
 
 def game_rules(user_choice, com_choice):
     
-    choices = ['rock','paper', 'scissors'] or ['Rock','Paper','Scissors']
+    choices = ['rock','paper', 'scissors']
 
     #.if the user's input is the same as what the computer generated the program should display 'ITs A TIE'
     if user_choice == com_choice:
@@ -32,9 +32,9 @@ def game_rules(user_choice, com_choice):
          user_choice == 'scissors'and com_choice == 'paper':
         return 'you WIN!!!'
     #. this condition is in the event where the user inputs anything other than Rock, paper or scissors
-    elif user_choice not in ['rock', 'paper', 'scissor'] or ['Rock','Paper', 'Scissors'] and com_choice == 'rock' or\
-         user_choice not in ['rock', 'paper', 'scissor'] or ['Rock','Paper', 'Scissors'] and com_choice == 'scissor' or \
-         user_choice not in ['rock', 'paper','scissor'] or ['Rock','Paper', 'Scissors'] and com_choice == 'paper':
+    elif user_choice not in ['rock', 'paper', 'scissor'] and com_choice == 'rock' or\
+         user_choice not in ['rock', 'paper', 'scissor'] and com_choice == 'scissor' or \
+         user_choice not in ['rock', 'paper','scissor'] and com_choice == 'paper':
         return 'You\'ve got to choose rock, paper or scissors!!!'    
     else:
         return 'COM wins'
