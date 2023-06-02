@@ -43,14 +43,14 @@ def game_rules(user_choice, com_choice):
 
 def game():
     while True:
-        print('WELCOME TO OUR LITTLE ROCK, PAPER, SCISSORS GAME. \n THE RULES ARE SIMPLE, ROCK BEATS SCISSORS, SCISSORS BEATS PAPER WHILST PAPER BEATS ROCK')
+        print('\nWELCOME TO OUR LITTLE ROCK, PAPER, SCISSORS GAME. \nTHE RULES ARE SIMPLE, ROCK BEATS SCISSORS, SCISSORS BEATS PAPER WHILST PAPER BEATS ROCK\n \n')
         user = user_input()
         com = com_input()
         print('You chose',user)
         print ('COM chose', com)
         print (game_rules(user, com))
 
-
+        #The code below shows adds the continue functionality.
         playOn = input('Do you wish to continue, yes or no: ').lower()
         
         if playOn != 'yes':
